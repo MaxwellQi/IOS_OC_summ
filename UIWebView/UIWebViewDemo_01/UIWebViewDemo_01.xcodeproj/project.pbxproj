@@ -15,6 +15,9 @@
 		11D327D7209415AC00DEADF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D327D6209415AC00DEADF4 /* main.m */; };
 		11D327E1209415AD00DEADF4 /* UIWebViewDemo_01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D327E0209415AD00DEADF4 /* UIWebViewDemo_01Tests.m */; };
 		11D327EC209415AD00DEADF4 /* UIWebViewDemo_01UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D327EB209415AD00DEADF4 /* UIWebViewDemo_01UITests.m */; };
+		11D327FB2094182000DEADF4 /* UIWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D327FA2094182000DEADF4 /* UIWebViewViewController.m */; };
+		11D327FE2094183800DEADF4 /* WKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D327FD2094183800DEADF4 /* WKWebViewViewController.m */; };
+		11D328052094853F00DEADF4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D328042094853F00DEADF4 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		11D327E7209415AD00DEADF4 /* UIWebViewDemo_01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIWebViewDemo_01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D327EB209415AD00DEADF4 /* UIWebViewDemo_01UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIWebViewDemo_01UITests.m; sourceTree = "<group>"; };
 		11D327ED209415AD00DEADF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11D327F92094182000DEADF4 /* UIWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIWebViewViewController.h; sourceTree = "<group>"; };
+		11D327FA2094182000DEADF4 /* UIWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIWebViewViewController.m; sourceTree = "<group>"; };
+		11D327FC2094183800DEADF4 /* WKWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewViewController.h; sourceTree = "<group>"; };
+		11D327FD2094183800DEADF4 /* WKWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewViewController.m; sourceTree = "<group>"; };
+		11D328042094853F00DEADF4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D328052094853F00DEADF4 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 				11D327DF209415AD00DEADF4 /* UIWebViewDemo_01Tests */,
 				11D327EA209415AD00DEADF4 /* UIWebViewDemo_01UITests */,
 				11D327C5209415A400DEADF4 /* Products */,
+				11D328032094853D00DEADF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +115,10 @@
 				11D327C8209415A500DEADF4 /* AppDelegate.m */,
 				11D327CA209415A500DEADF4 /* ViewController.h */,
 				11D327CB209415A500DEADF4 /* ViewController.m */,
+				11D327F92094182000DEADF4 /* UIWebViewViewController.h */,
+				11D327FA2094182000DEADF4 /* UIWebViewViewController.m */,
+				11D327FC2094183800DEADF4 /* WKWebViewViewController.h */,
+				11D327FD2094183800DEADF4 /* WKWebViewViewController.m */,
 				11D327CD209415A500DEADF4 /* Main.storyboard */,
 				11D327D0209415AC00DEADF4 /* Assets.xcassets */,
 				11D327D2209415AC00DEADF4 /* LaunchScreen.storyboard */,
@@ -130,6 +144,14 @@
 				11D327ED209415AD00DEADF4 /* Info.plist */,
 			);
 			path = UIWebViewDemo_01UITests;
+			sourceTree = "<group>";
+		};
+		11D328032094853D00DEADF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11D328042094853F00DEADF4 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +286,8 @@
 			files = (
 				11D327CC209415A500DEADF4 /* ViewController.m in Sources */,
 				11D327D7209415AC00DEADF4 /* main.m in Sources */,
+				11D327FB2094182000DEADF4 /* UIWebViewViewController.m in Sources */,
+				11D327FE2094183800DEADF4 /* WKWebViewViewController.m in Sources */,
 				11D327C9209415A500DEADF4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDEVQQ22JR;
 				INFOPLIST_FILE = UIWebViewDemo_01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDEVQQ22JR;
 				INFOPLIST_FILE = UIWebViewDemo_01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
