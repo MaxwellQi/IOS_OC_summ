@@ -19,6 +19,18 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"%s,----line:%d----",__func__,__LINE__);
+    [self performSelector:@selector(test) withObject:self afterDelay:0];
+    NSLog(@"%s,----line:%d----",__func__,__LINE__);
+}
+
+- (void)test
+{
+    NSLog(@"%s,----line:%d----",__func__,__LINE__);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
